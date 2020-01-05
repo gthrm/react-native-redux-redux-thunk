@@ -27,8 +27,10 @@ class SignUpForm extends React.Component {
       name,
       password
     } = this.state;
+    const { signUpUser } = this.props;
     if (email && name && password) {
       const user = _.clone(this.state);
+      signUpUser(user);
       console.log(user);
     }
   };

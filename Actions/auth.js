@@ -30,6 +30,9 @@ export function userSignUp(user) {
           this._storeData();
           dispatch({ type: USER_SIGN_UP, payload: response });
         }
+      )
+      .catch(
+        (err) => console.error(err)
       );
   };
 }
